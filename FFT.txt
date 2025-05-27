@@ -1,0 +1,29 @@
+Fast Fourier Transform (FFT)
+
+- An algorithm that computes the Discrete Fourier Transform (DFT) of a discrete-time signal
+- The output of the DFT is a sequence of complex numbers that represent the frequency components of the original signal
+- These frequency components are represented as the magnitudes and phases of sinusoidal waves at different frequencies that, when combined, reconstruct the original signal.
+
+
+Implementation
+
+Data Collection: 
+- Collect gyro data over a constant, pre-defined sampling period/frequency. 
+
+Preprocessing (denoise/increase the SNR):
+- Windowing: Apply a window function to minimize *spectral leakage. Common window functions include Hanning, Hamming, Blackman, and Gaussian. This step helps to reduce artifacts in the frequency domain.
+
+FFT Calculation: 
+- Apply the FFT algorithm to the preprocessed gyro data. The FFT algorithm will compute the frequency components present in the signal. The output will be a set of complex numbers representing the magnitude and phase of each frequency component.
+
+Post-processing:
+- Frequency Binning: Once you have the FFT output, you can map the frequency components to their corresponding frequency bins. Each bin represents a specific range of frequencies.
+- Magnitude Calculation: Calculate the magnitude of each frequency component from the complex FFT output. This magnitude represents the strength or amplitude of each frequency component in the signal.
+- Frequency Domain Analysis: Analyze the frequency domain data to identify our frequencies of interest. You can use techniques such as spectral analysis, peak detection, or filtering to extract relevant information.
+- Visualization and Interpretation (optional): Visualize the frequency spectrum and interpret the results. You can plot the magnitude spectrum to visualize the frequency content of the gyro data. 
+Interpret the peaks in the spectrum to understand the dominant frequencies and any periodic patterns present in the data.
+
+*Spectral leakage occurs because the frequency components of the signal may not align perfectly with the frequency bins of the FFT. 
+As a result, energy from the signal leaks into adjacent frequency bins, leading to smearing or spreading of energy across the frequency spectrum. 
+This can obscure or distort the true frequency content of the signal, particularly for frequency components that are not integer multiples of the fundamental frequency.
+
