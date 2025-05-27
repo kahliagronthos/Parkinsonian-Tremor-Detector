@@ -2,14 +2,14 @@
 
 ## Overview
 
-Parkinson’s disease affects over 10 million people worldwide, with more than 70% experiencing resting tremors—characterized by involuntary shaking while the limb is at rest, typically at 3–6 Hz.
+Parkinson’s disease affects over 10 million people worldwide, with more than 70% experiencing resting tremors that are characterized by involuntary shaking while the limb is at rest, typically at 3–6 Hz.
 
-This project implements a wearable tremor detector using the STM32F429 Discovery Board and its built-in L3GD20 gyroscope. It performs real-time tremor detection and displays tremor presence and intensity on the onboard LCD.
+This project implements a wearable tremor detector using the STM32F429 Discovery Board and its built-in L3GD20 gyroscope. It performs real-time tremor detection and displays tremor presence and intensity via the onboard LCD.
 
 ## Objective
 
 Design a standalone embedded system that:
-- Captures angular velocity via the L3GD20 gyroscope
+- Captures angular velocity via the gyroscope
 - Detects resting tremors (3–6 Hz) through frequency analysis
 - Displays tremor presence and intensity using only onboard resources
 
