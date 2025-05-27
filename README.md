@@ -12,7 +12,7 @@ This project implements a wearable Parkinsonian Tremor Detector using the STM32F
 Build a standalone embedded system that:
 - Captures real-time angular velocity data using the L3GD20 gyroscope.
 - Analyzes data segments to detect resting tremors (3–6 Hz frequency range).
-- Provides **visual indication** of detected tremors and their intensity using only on-board hardware (no external sensors or modules).
+- Provides visual indication of detected tremors and their intensity using only on-board hardware (no external sensors or modules).
 
 
 ## Hardware Requirements
